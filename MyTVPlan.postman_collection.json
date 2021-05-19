@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "2df148b0-b2f6-4a3b-a586-202e391984f6",
+		"name": "MyTVPlan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Videos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/videos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Videos Type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/videos/type/series",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"videos",
+						"type",
+						"series"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Video Platform",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/videos/platform/HBO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"videos",
+						"platform",
+						"HBO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Video Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/videos/category/comedy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"videos",
+						"category",
+						"comedy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Video Rating",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/videos/rating/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"videos",
+						"rating",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Videos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Avatar\",\n    \"type\": \"movie\",\n    \"platform\": \"HBO\",\n    \"category\": \"adventures\",\n    \"rating\": \"4\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/videos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Videos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Family Guy\",\n    \"type\": \"series\",\n    \"platform\": \"Disney+\",\n    \"category\": \"comedy\",\n    \"rating\": \"3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/videos/60a59163af740b102392d5e4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"videos",
+						"60a59163af740b102392d5e4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Videos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/videos/60a59187a14a2c10356c9e70",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"videos",
+						"60a59187a14a2c10356c9e70"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

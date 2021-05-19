@@ -3,7 +3,8 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/myplantv-services', {
     useNewUrlParser: true, 
     useUnifiedTopology: true,
-    user: 'angel',
+    useFindAndModify: false,
+    user: 'sergio',
     pass: '1234',
     authSource: 'admin'
 });
@@ -15,10 +16,12 @@ db.once('open', console.log.bind(console, 'Successfully connected to the databas
 var videoSchema = new mongoose.Schema({
     title: {
         type: String,
+        required: true,
         minLength: 1
     },
     type: {
         type: String,
+        required: true,
         enum: [
             'movie',
             'series',
@@ -27,6 +30,7 @@ var videoSchema = new mongoose.Schema({
     },
     platform: {
         type: String,
+        required: true,
         enum: [
             'Netflix',
             'HBO',
@@ -36,6 +40,7 @@ var videoSchema = new mongoose.Schema({
     },
     category: {
         type: String,
+        required: true,
         enum: [
             'comedy',
             'thriller',
@@ -45,6 +50,7 @@ var videoSchema = new mongoose.Schema({
     },
     rating: {
         type: Number,
+        required: true,
         min: 0,
         max: 5
     }
